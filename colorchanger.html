@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 300px;
+            width: 300px;
+            border:1px solid black;
+            text-align: center;
+            border-radius: 50%;
+            align-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        sumeet
+    </div>
+    <button onclick="changecolor()">click to chnage </button>
+</body>
+<script>
+    function changecolor1(){
+        let r = Math.floor(Math.random()*255);
+        let g = Math.floor(Math.random()*255);
+        let b = Math.floor(Math.random()*255);
+        return `rgb(${r},${g},${b})`
+    }
+    function changecolor(){
+        let newcolor = changecolor1();
+        const container = document.querySelector("div");
+        container.style.background = newcolor;
+        
+    }
+</script>
+</html>
